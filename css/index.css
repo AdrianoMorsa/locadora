@@ -1,0 +1,45 @@
+* {
+    -webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	outline: none;
+}
+
+h1{
+    font-family: 'Comic Sans MS';
+    color: white;
+}
+
+.container-fluid{
+    background-color: rgb(26, 122, 122);
+}
+
+div.container.logo{
+    margin-top: 100px;
+}
+
+.img-responsive.text-center{
+    margin: 0 auto;
+}
+
+input{
+    margin-top: 5px;
+}
+
+button{
+    margin-top: 5px;
+    background-color: rgb(26, 122, 122);
+    color: white;
+}
+
+a{
+    color: rgb(26, 122, 122);
+}
+
+/* MEDIAS */
+@media (max-width: 575.98px) {
+    h1 {
+      font-size: 30px;
+      text-align: center;
+    }
+}
