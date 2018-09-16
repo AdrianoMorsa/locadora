@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -13,7 +16,11 @@
     <link rel="icon" href="img/car.png" type="image/x-icon"/>
 
     <!-- Javascript -->
-
+    <script type="text/javascript">
+        function att(){
+            window.alert ('Usuário não autenticado!') 
+        }
+    </script>
 </head>
 <body>
     <div class="container-fluid">
@@ -26,26 +33,35 @@
 
     <div class="container logo">
         <div class="row">
-            <img src="img/logo.png" class="img-responsive text-center" alt="Logo" width="200px" height="200px"/>
+            <img src="img/logo.png" class="img-responsive text-center" alt="Logo" width="127px" height="127px"/>
         </div>
     </div>
 
     <div class="container">
         <div class="row">
             <div class="col-md-4"></div>
-        
+
             <div class="col-md-4">
                 <section class="login-form">
-                    <form method="post" action="#" role="login">
-                        <input type="usuario" name="usuario" placeholder="Usuário" required class="form-control input-lg"/>
+                    <form method="post" action="validar.php" role="login">
+                        <input type="text" name="usuario" placeholder="Usuário" required class="form-control input-lg"/>
                         
-                        <input type="senha" class="form-control input-lg" id="senha" placeholder="Senha" required="" />
+                        <input type="password" class="form-control input-lg" id="senha" placeholder="Senha" required="" />
                         
                         <button type="submit" name="logar" class="btn btn-lg btn-block">Logar</button>
                         <div>
                             <a href="#">Criar conta</a> ou <a href="#">Recuperar senha</a>
                         </div>
                     </form>
+                    <?php  
+                    if (isset($_SESSION['nao_autenticado'])):
+                        ?>
+
+                        <script>att();</script>
+
+                        <?php  
+                    endif;
+                    ?>
                 </section> 
             </div> 
         </div>
