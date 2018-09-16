@@ -47,7 +47,6 @@ session_start();
                         <input type="text" name="usuario" placeholder="Usuário" required class="form-control input-lg"/>
                         
                         <input type="password" class="form-control input-lg" id="senha" placeholder="Senha" required="" />
-                        
                         <button type="submit" name="logar" class="btn btn-lg btn-block">Logar</button>
                         <div>
                             <a href="#">Criar conta</a> ou <a href="#">Recuperar senha</a>
