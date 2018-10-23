@@ -1,18 +1,19 @@
 * {
     -webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;
-	outline: none;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
 }
 
+body.corpo {
+    background-color: cyan;
+}
 h1{
     font-family: 'Comic Sans MS';
     color: white;
 }
 
-.container-fluid{
-    background-color: rgb(26, 122, 122);
-}
+
 
 div.container.logo{
     margin-top: 100px;
@@ -41,5 +42,5 @@ a{
     h1 {
       font-size: 30px;
       text-align: center;
-    }
+  }
 }
