@@ -22,18 +22,11 @@ session_start();
         }
     </script>
 </head>
-<body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col">
-                <h1>Locadora de Veiculos</h1>
-            </div>  
-        </div>  
-    </div>
+<body class="corpo">
 
     <div class="container logo">
         <div class="row">
-            <img src="img/logo.png" class="img-responsive text-center" alt="Logo" width="127px" height="127px"/>
+            <img src="img/idle.png" class="img-responsive text-center" alt="Idle" width="200px" height="200px"/>
         </div>
     </div>
 
@@ -43,17 +36,18 @@ session_start();
 
             <div class="col-md-4">
                 <section class="login-form">
-                    <form method="post" action="validar.php" role="login">
-                        <input type="text" name="usuario" placeholder="Usuário" required class="form-control input-lg"/>
-                        
-                        <input type="password" class="form-control input-lg" id="senha" placeholder="Senha" required="" />
+                    <form method="POST" action="validar-login.php" role="login">
+                        <input type="text" name="usuario" placeholder="Usuário"  class="form-control input-lg" required/>
+                        <br>
+                        <input type="password" name="senha" placeholder="Senha" class="form-control input-lg" id="senha"  required />
+                        <br>
                         <button type="submit" name="logar" class="btn btn-lg btn-block">Logar</button>
                         <div>
                             <a href="#">Criar conta</a> ou <a href="#">Recuperar senha</a>
                         </div>
                     </form>
                     <?php  
-                    if (isset($_SESSION['nao_autenticado'])):
+                    if (isset($_SESSION['no_autentic'])):
                         ?>
 
                         <script>att();</script>
